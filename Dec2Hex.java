@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 class Dec2Hex
 {
@@ -24,20 +24,28 @@ class Dec2Hex
          int rem, num;
 	num = Arg1;
 	String hexadecimal=""; 
+        if(num == 0)
+        {
+            System.out.println("Error: A value must be entered");
+        }
+        else
+        {
         System.out.println("Converting the Decimal Value " + num + " to Hex...");
-        
+        }
         while(num != 0)
         {
 	    rem=num%16;
 	    hexadecimal= ch[rem] + hexadecimal;
             num= num/16;
         }
-	if(!hexadecimal.isEmpty())
+        
+        if(!hexadecimal.isEmpty())
         {
             System.out.println("Hexadecimal representation is : " + hexadecimal);            
         }
         else
         {
-        System.out.println("A value must be entered");
+        System.out.println("Error: A value must be entered");
         }
+    }
 }
