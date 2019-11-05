@@ -32,13 +32,12 @@ class Dec2Hex
 	    hexadecimal= ch[rem] + hexadecimal;
             num= num/16;
         }
-	    if(hexadecimal.isEmpty())
+	if(!hexadecimal.isEmpty())
         {
-            System.out.println("A value must be entered");
-            return;
+            System.out.println("Hexadecimal representation is : " + hexadecimal);            
         }
-        
-        System.out.println("Hexadecimal representation is : " + hexadecimal);
-
-    }
+        else
+        {
+        System.out.println("A value must be entered");
+        }
 }
